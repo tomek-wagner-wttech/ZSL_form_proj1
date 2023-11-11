@@ -8,7 +8,8 @@ import { API_URL } from "../constants";
 class NewDataForm extends React.Component {
   state = {
     pk: 0,
-    data: ""
+    data: "",
+    data2: ""
   };
 
   componentDidMount() {
@@ -52,6 +53,13 @@ class NewDataForm extends React.Component {
             name="data"
             onChange={this.onChange}
             value={this.defaultIfEmpty(this.state.data)}
+          />
+          <Label for="data2">Data2:</Label>
+          <Input
+            type="text"
+            name="data2"
+            onChange={this.onChange}
+            value={this.defaultIfEmpty(this.state.data2)}
           />
         </FormGroup>
         <Button>Send</Button>
